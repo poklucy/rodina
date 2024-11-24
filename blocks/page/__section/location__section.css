@@ -1,0 +1,13 @@
+.location__section{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.location__section h2{
+    padding-left: 26px;
+}
+
+.iframe{
+    width: 100%;
+}

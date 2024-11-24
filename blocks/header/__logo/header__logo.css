@@ -3,7 +3,7 @@
   height: 33px;
   position: absolute;
   left: 50%;
-  top: 3.5%;
+  top: 6%;
   transform: translateX(-50%);
 }
 
@@ -20,6 +20,6 @@
   height: 96px;
   object-fit: contain;
   position: absolute;
-  left: 47.5%;
+  left: 46%;
   transform: translateY(-50%);
 }

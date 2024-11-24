@@ -1,15 +1,81 @@
-@import url('./__description/card__description.css');
-@import url('./__image/card__image.css');
-@import url('./__like-button/card__like-button.css');
-@import url('./__like-button/_is-active/card__like-button_is-active.css');
-@import url('./__delete-button/card__delete-button.css');
-@import url('./__title/card__title.css');
+.card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:20px;
+}
 
-.card {
-  font-family: 'Inter', Arial, sans-serif;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
+.card{
+  width: 100%;
+  background-color: var(--white);
+  padding: 20px 23px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+}
+
+.header__card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number_card{
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 118%;
+  color: #35394c;
+}
+
+.button_card-container{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.card__image{
+  height: 210px;
+}
+
+.footer_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 133%;
+  text-align: right;
+  color: #35394c;
+}
+
+.footer__card{
+  display: flex;
+  flex-direction: column;
+  gap:22px;
+}
+
+.footer__card-table {
+  width: 100%; /* Таблица занимает полную ширину родительского элемента */
+  text-align: start; /* Выравниваем текст по центру ячеек */
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #35394c;
+}
+
+.footer__card-table td {
+  vertical-align: top;
+  padding-right: 20px;
+  &:last-child{
+    padding-right: 0;
+  }
+}
+
+.footer__card-accent{
+  height: 1px;
+  background-color: var(--text-color);
+  width: 50%;
 }

@@ -2,6 +2,9 @@
 @import url('./__section/filter_section.css');
 @import url('./__section/form_section.css');
 @import url('./__section/action__section.css');
+@import url('./__section/location__section.css');
+@import url('./__section/information__section.css');
+@import url('./__section/card__template.css');
 
 
 .container{
@@ -9,6 +12,10 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+}
+
+.color-container{
+    background-color: var(--bg-light);
 }
 
 .container > div:empty {
@@ -39,4 +46,17 @@
 
 .dark{
     color: var(--text-color);
+}
+
+.sidebar{
+    background-image: url("sidebar.svg");
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    margin: auto;
+}
+
+.margin_auto{
+    margin: auto;
 }

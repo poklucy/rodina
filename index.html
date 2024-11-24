@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Родина</title>
   <link rel="stylesheet" href="./pages/index.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58889fa-b01a-4768-93f1-46e062933019&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body class="page page__content">
 
@@ -18,7 +17,7 @@
         <li class="header__nav-item">
           <a href="tel:+74953331122">+7 495 333 11 22</a>
           <button class="favorite_button">
-            <div class="favorite_button-img"></div>
+            <div class="favorite_button-white-img"></div>
             <div>12</div>
           </button>
         </li>
@@ -36,9 +35,9 @@
         <li class="header__nav-active-item header__nav-active-item-accent">
           <ul class="header__nav-active-sublist">
             <li><button class="volume_button">Выкл.</button></li>
-            <li class="header_text">компания</li>
-            <li class="header_text">кластеры</li>
-            <li class="header_text">проекты</li>
+            <li class="header_text"><a href="#">компания</a></li>
+            <li class="header_text"><a href="#">кластеры</a></li>
+            <li class="header_text"><a href="#">проекты</a></li>
           </ul>
         </li>
         <li class="header__nav-active-item">
@@ -46,9 +45,9 @@
         </li>
         <li class="header__nav-active-item header__nav-active-item-accent">
           <ul class="header__nav-active-sublist">
-            <li class="header_text">Офисная недвижимость</li>
-            <li class="header_text">пресс-центр</li>
-            <li class="header_text">Контакты</li>
+            <li class="header_text"><a href="#">Офисная недвижимость</a></li>
+            <li class="header_text"><a href="#">пресс-центр</a></li>
+            <li class="header_text"><a href="#">Контакты</a></li>
           </ul>
         </li>
       </ul>
@@ -110,18 +109,347 @@
         </div>
       </div>
     </section>
+    <div class="color-container">
+      <div class="container">
+        <div></div>
+        <section class="location__section">
+          <h2 class="title dark">Расположение</h2>
+          <div id="map" style="width: 100%; height: 391px;"></div>
+        </section>
+        <div></div>
+
+        <section class="information__section">
+          <div class="information__template">
+            <div class="information__template-description">
+              <div class="information__template-header">
+                <h2 class="title white">Родина Парк</h2>
+                <button class="accent-button">подробнее</button>
+              </div>
+              <ul class="information__template-list">
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li>Офисы класса А от 14 млн. ₽</li>
+                    <li class="location">ЗАО, ул. Верейская, 12</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="metro">Давыдково</li>
+                    <li class="foot">5 мин</li>
+                    <li class="car">2 мин</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="metro">Кунцевская </li>
+                    <li class="foot">18 мин</li>
+                    <li class="cycle">7 мин</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="list-decoration">Готовность IV квартал 2026</li>
+                    <li class="list-decoration">Премиальная инфраструктура</li>
+                    <li class="list-decoration">Подземный паркинг с мойкой и сервисом</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar"></div>
+          <div class="card-container">
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            <button class="button_card">подробнее</button>
+            </div>
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+          </div>
+          <div class="sidebar"></div>
+          <div class="accent-button margin_auto">смотреть 25 вариантов</div>
+        </section>
+        <div></div>
+
+        <section class="information__section">
+          <div class="information__template">
+            <div class="information__template-description">
+              <div class="information__template-header">
+                <h2 class="title white">Родина Парк</h2>
+                <button class="accent-button">подробнее</button>
+              </div>
+              <ul class="information__template-list">
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li>Офисы класса А от 14 млн. ₽</li>
+                    <li class="location">ЗАО, ул. Верейская, 12</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="metro">Давыдково</li>
+                    <li class="foot">5 мин</li>
+                    <li class="car">2 мин</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="metro">Кунцевская </li>
+                    <li class="foot">18 мин</li>
+                    <li class="cycle">7 мин</li>
+                  </ul>
+                </li>
+                <li class="information__template-item">
+                  <ul class="information__template-sublist">
+                    <li class="list-decoration">Готовность IV квартал 2026</li>
+                    <li class="list-decoration">Премиальная инфраструктура</li>
+                    <li class="list-decoration">Подземный паркинг с мойкой и сервисом</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar"></div>
+          <div class="card-container">
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 23</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>32</td>
+                      <td>250 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">87 м²</div>
+                    <div class="footer-text">18 146 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+          </div>
+          <div class="sidebar"></div>
+          <div class="accent-button margin_auto">смотреть 25 вариантов</div>
+        </section>
+        <div></div>
+      </div>
+    </div>
     <div class="container">
       <div></div>
       <section class="action__section">
-      <h2 class="title dark">АКЦИИ</h2>
-      <div class="action_template">
-        <div class="action_template-header">
-          <h3 class="title-template">Беспроцентная рассрочка</h3>
-          <h4 class="subtitle-template">До 5 лет</h4>
+        <h2 class="title dark">АКЦИИ</h2>
+        <div class="template-container">
+          <div class="action_template">
+            <div class="action_template-header">
+              <h3 class="title-template">Беспроцентная рассрочка</h3>
+              <h4 class="subtitle-template">До 5 лет</h4>
+            </div>
+            <div class="action-accent"></div>
+            <div class="action-text">Группа Родина запустила авторский курс «Основы девелопмента», разработанный Цикл лекций и семинаров предоставит магистрам...</div>
+          </div>
+          <div class="action_template">
+            <div class="action_template-header">
+              <h3 class="title-template">Trade in</h3>
+              <h4 class="subtitle-template">Вашего помещения</h4>
+            </div>
+            <div class="action-accent"></div>
+            <div class="action-text">Группа Родина запустила авторский курс «Основы девелопмента», разработанный Цикл лекций и семинаров предоставит магистрам...</div>
+          </div>
         </div>
-        <div class="action-accent"></div>
-        <div class="action-text">Группа Родина запустила авторский курс «Основы девелопмента», разработанный Цикл лекций и семинаров предоставит магистрам...</div>
-      </div>
+        <div class="sidebar"></div>
     </section>
       <div></div>
     </div>
@@ -299,7 +627,59 @@
     });
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const observerOptions = {
+      threshold: 0.1, // Анимация запускается, если 10% элемента видны на экране
+    };
 
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        const element = entry.target;
+
+        if (entry.isIntersecting) {
+          element.classList.add('information__template-list--visible'); // Показать элемент
+        } else {
+          element.classList.remove('information__template-list--visible'); // Скрыть элемент
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Находим ВСЕ элементы с классом .information__template-description
+    const animationElements = document.querySelectorAll('.information__template-list');
+
+    // Добавляем их в наблюдатель
+    animationElements.forEach((el) => observer.observe(el));
+  });
+</script>
+<script>
+  ymaps.ready(init); // Ждём загрузки API Яндекс.Карт
+
+  function init() {
+    // Создаём карту, задаём координаты и масштаб
+    var myMap = new ymaps.Map("map", {
+      center: [55.712818, 37.440891], // Координаты центра (пример: Москва)
+      zoom: 10
+    });
+
+    // Кастомная иконка для маркера
+    var customIcon = {
+      iconLayout: 'default#image', // Тип иконки: картинка
+      iconImageHref: './map.svg',
+      iconImageSize: [30, 42], // Размер иконки (ширина, высота)
+      iconImageOffset: [-15, -42] // Смещение иконки относительно точки (центрируйте)
+    };
+
+    // Добавляем метку с кастомной иконкой
+    var myPlacemark = new ymaps.Placemark([55.712818, 37.440891], {
+      hintContent: 'Мое кастомное место!',
+      balloonContent: 'Здесь вы могли бы разместить дополнительную информацию.'
+    }, customIcon);
+
+    // Добавляем метку на карту
+    myMap.geoObjects.add(myPlacemark);
+  }
 </script>
 
 

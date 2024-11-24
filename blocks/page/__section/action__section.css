@@ -4,6 +4,12 @@
     gap:62px;
 }
 
+.template-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .action_template{
     width: 404px;
     display: flex;

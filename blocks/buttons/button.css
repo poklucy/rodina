@@ -4,7 +4,9 @@
   font-family: var( --main-font);
   font-size: var( --main-size);
   text-transform: uppercase;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   &:hover{
     background-color: #FF5E64;
   }
@@ -18,7 +20,7 @@
     width: 16px;
     position: absolute;
     right: 3%;
-    top: 5%;
+    top: 9%;
     transform: translateY(-50%);
     &:hover {
         background-image: url(./burger_hover.svg);
@@ -34,31 +36,42 @@
   gap:12px;
 }
 
+.favorite_button-white-img{
+    background-image: url(./favorit_white.svg);
+    height: 20px;
+    width: 20px;
+    &:hover{
+        background-image: url(./favorit_hover.svg);
+        height: 20px;
+        width: 20px;
+    }
+}
+
 .favorite_button-img{
     background-image: url(./favorit.svg);
     height: 20px;
     width: 20px;
+    &:hover{
+        background-image: url(./favorit_hover.svg);
+        height: 20px;
+        width: 20px;
+    }
 }
 
-.favorite_button-img:hover{
-    background-image: url(./favorit_hover.svg);
-    height: 20px;
-    width: 20px;
-}
- 
+
 .close_button{
-  background-image: url(./close.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 18px;
-  width: 18px;
-     position: absolute;
-     right: 3%;
-     top: 5%;
-     transform: translateY(-50%);
-     &:hover{
-    background-image: url(./close_hover.svg);
-  }
+    background-image: url(./close.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    right: 3%;
+    top: 9%;
+    transform: translateY(-50%);
+    &:hover{
+        background-image: url(./close_hover.svg);
+    }
 }
 
 .volume_button{
@@ -91,4 +104,42 @@
 
 button:hover .reset_button-item {
     background-image: url("./reset_hover.svg");
+}
+
+
+.pdf_button{
+    color: var(--white);
+    font-family: var( --main-font);
+    font-size: var(--main-size);
+    display: flex;
+    flex-direction: row;
+    gap:12px;
+}
+
+.pdf_button-img{
+    background-image: url(./pdf.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    &:hover{
+        background-image: url(./pdf_hover.svg);
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.button_card{
+    height: 42px;
+    width: 100%;
+    background: #dfe1ea;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--main-size);
+    text-transform: uppercase;
+    color: var(--text-color);
+    &:hover{
+        background-color: var(--accent-color);
+        color: var(--white);
+    }
 }
