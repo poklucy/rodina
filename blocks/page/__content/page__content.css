@@ -1,0 +1,12 @@
+.content{
+  max-width: 978px;
+  margin: auto;
+}
+
+.page__content {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}

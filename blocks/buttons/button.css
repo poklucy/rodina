@@ -1,0 +1,94 @@
+.accent-button{
+  background-color: var(--accent-button);
+  color: var(--white);
+  font-family: var( --main-font);
+  font-size: var( --main-size);
+  text-transform: uppercase;
+  text-align: center;
+  &:hover{
+    background-color: #FF5E64;
+  }
+}
+
+.burger_button{
+    background-image: url(./burger.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 16px;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    transform: translateY(-50%);
+    &:hover {
+        background-image: url(./burger_hover.svg);
+    }
+}
+
+.favorite_button{
+  color: var(--white);
+  font-family: var( --main-font);
+  font-size: var(--main-size);
+  display: flex;
+  flex-direction: row;
+  gap:12px;
+}
+
+.favorite_button-img{
+    background-image: url(./favorit.svg);
+    height: 20px;
+    width: 20px;
+}
+
+.favorite_button-img:hover{
+    background-image: url(./favorit_hover.svg);
+    height: 20px;
+    width: 20px;
+}
+ 
+.close_button{
+  background-image: url(./close.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 18px;
+     position: absolute;
+     right: 3%;
+     top: 5%;
+     transform: translateY(-50%);
+     &:hover{
+    background-image: url(./close_hover.svg);
+  }
+}
+
+.volume_button{
+    font-size: 10px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &::before{
+        content: url("./volume.svg");
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.reset_button {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+    justify-content: end;
+}
+
+.reset_button-item {
+    background-image: url("./reset.svg");
+    height: 16px;
+    width: 16px;
+}
+
+button:hover .reset_button-item {
+    background-image: url("./reset_hover.svg");
+}

@@ -1,0 +1,42 @@
+@import url('./__content/page__content.css');
+@import url('./__section/filter_section.css');
+@import url('./__section/form_section.css');
+@import url('./__section/action__section.css');
+
+
+.container{
+    max-width: 978px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div:empty {
+    height: 80px;
+}
+
+.uppercase-text{
+    font-family: var(--main-font);
+    font-size: var(--smaller_size);
+    line-height: 444%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.title {
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--title-size);
+    line-height: 167%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.white{
+    color: var(--white);
+}
+
+.dark{
+    color: var(--text-color);
+}

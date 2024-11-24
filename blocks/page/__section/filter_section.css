@@ -1,0 +1,211 @@
+.filter__section-background{
+    background-image: url('../__section/filter_bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 514px;
+}
+
+.filter__section{
+    max-width: 978px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 80px;
+}
+
+.title{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 167%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.main_title{
+    max-width: 440px;
+    font-size: 33px;
+    line-height: 121%;
+}
+
+.filter__content{
+    background-color: rgba(223, 225, 234, 0.6);
+    padding: 40px 27px 27px;
+    display: flex;
+    flex-direction: column;
+    gap:28px;
+}
+
+.filter__content-list{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.filter__content-list li{
+    width: 100%;
+}
+
+.filter__content-list .accent-button{
+    width: 100%;
+    height: 100%;
+}
+
+.filter-button {
+    width: 100%;
+    background-color: var(--white);
+    padding: 15px 12px;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    padding: 17px 12px;
+    background-color: var(--white);
+    font-family: var(--main-font);
+    font-size: 9px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &::after{
+        content: url("drop.svg");
+        transition: transform 0.3s ease;
+    }
+}
+
+.custom-dropdown.open .dropdown-toggle {
+    color: #8B8EA8;
+}
+
+.custom-dropdown.open .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    background-color: white;
+    z-index: 10;
+}
+
+.dropdown-item {
+    font-family: var(--main-font);
+    font-size: 9px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    &:hover{
+        color: var(--accent-color)
+    }
+}
+
+.custom-dropdown.open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 0px 12px 17px 12px;
+}
+
+.range-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+    font-family: var(--main-font);
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--text-color);
+}
+
+.range-slider {
+    position: relative;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    position: absolute;
+    left:0%;
+    margin-top: 8px;
+    background: transparent;
+    pointer-events: none; /* Скрываем, что мышь может пересекать область */
+    z-index: 2;
+}
+
+/* Стили для "ползунков" */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    pointer-events: all;
+    z-index: 3;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    pointer-events: all;
+    z-index: 3;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    pointer-events: all;
+    z-index: 3;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    background: var(--accent-color);
+}
+
+
+
+.unit {
+    font-family: var(--main-font);
+    font-size: 11px;
+    color: var(--text-color); /* Оставляем текущую цветовую схему */
+    text-transform: none;
+}
+
+.range-bar {
+    position: absolute;
+    height: 1px;
+    background-color: var(--accent-color); /* Красная линия между ползунками */
+    width: 100%; /* Начальное заполнение */
+    margin-top: 15px;
+}
+
+

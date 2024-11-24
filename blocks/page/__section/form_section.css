@@ -1,0 +1,110 @@
+.form__section {
+    display: flex;
+    align-items: center;
+    background-color: #37394A;
+}
+
+.form__container {
+    max-width: 450px;
+    margin-left: auto;
+    padding-right: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+}
+
+.form__content {
+    width: 50%;
+}
+
+.form__container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.form-input{
+    background-color: var(--input-background);
+    padding: 14px 0 14px 16px;
+}
+
+input::placeholder{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--main-size);
+    line-height: 182%;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 1;
+}
+
+.form-input {
+    textarea, input[type="text"] {
+        border: none;
+        outline: none;
+        line-height: 182%;
+        text-transform: uppercase;
+        color: var(--text-color);
+    }
+}
+
+.form__section-background{
+    background-image: url('form_background.png');
+    width: 50%;
+    height: 540px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkbox__container{
+    display: flex;
+    flex-direction: column;
+    gap:11px;
+}
+
+.custom-checkbox {
+    display: flex;
+    gap:17px;
+    align-items: center;
+}
+
+.custom-checkbox input {
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.checkbox {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--white);
+    flex-shrink: 0;
+}
+
+.checkbox-text{
+    font-family: var(--main-font);
+    font-size: var(--smaller_size);
+    line-height: 222%;
+    font-weight: 500;
+    color: #b8bac3;
+}
+
+.checkbox::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('checkbox.svg') center center no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.hidden-checkbox:checked + .checkbox::after {
+    opacity: 1;
+}
+
+.form__container .accent-button{
+    width: 125px;
+    height: 42px;
+}

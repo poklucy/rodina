@@ -1,0 +1,17 @@
+:root {
+  --bold-font: "Gilroy-Bold", sans-serif;
+  --main-font: "Gilroy-Medium", sans-serif;
+  --accent-font: "Gilroy-Regular", sans-serif;
+  --bg-dark: #2e303e;
+  --bg-light: #f7f8fa;
+  --text-color:  #35394C;
+  --input-background: #696A75;
+  --white: #ffff; 
+  --accent-button: #2f1fce;
+  --color-button: #DFE1EA;
+  --accent-color: #FF5E64;
+  --main-size: 11px;
+  --title-size: 24px;
+  --accent-size: 17px;
+  --smaller_size: 9px;
+}
