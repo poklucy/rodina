@@ -7,7 +7,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Родина</title>
   <link rel="stylesheet" href="./pages/index.css" />
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e58889fa-b01a-4768-93f1-46e062933019&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+  <script type="text/javascript">
+    var map;
+
+    DG.then(function () {
+      map = DG.map('map', {
+        center: [55.685566, 37.435647],
+        zoom: 11,
+        style: 'default-v2-dark',
+        defaultBackgroundColor: '#3b3b3b',
+      });
+
+      // Кастомная метка
+      var customIcon = DG.icon({
+        iconUrl: 'images/map.svg', // Ссылка на изображение иконки
+        iconSize: [40, 40], // Размер иконки
+        iconAnchor: [20, 40], // Точка привязки иконки (центр внизу)
+      });
+
+      // Первая метка
+      DG.marker([55.712812, 37.442356], {
+        icon: customIcon,
+        label: `
+                Родина парк<br>
+                16 офисов
+            `
+      }).addTo(map);
+
+      // Вторая метка
+      DG.marker([55.636288, 37.352692], {
+        icon: customIcon,
+        label:  `
+                Родина переделкино<br>
+                16 офисов
+            `
+      }).addTo(map);
+    });
+  </script>
 </head>
 <body class="page page__content">
 
@@ -114,7 +151,7 @@
         <div></div>
         <section class="location__section">
           <h2 class="title dark">Расположение</h2>
-          <div id="map" style="width: 100%; height: 391px;"></div>
+          <div id="map"></div>
         </section>
         <div></div>
 
@@ -122,35 +159,35 @@
           <div class="information__template">
             <div class="information__template-description">
               <div class="information__template-header">
-                <h2 class="title white">Родина Парк</h2>
+                <h2 class="title white">Родина Переделкино</h2>
                 <button class="accent-button">подробнее</button>
               </div>
               <ul class="information__template-list">
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
                     <li>Офисы класса А от 14 млн. ₽</li>
-                    <li class="location">ЗАО, ул. Верейская, 12</li>
+                    <li class="location">Боровское ш., вл. 51</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
-                    <li class="metro">Давыдково</li>
+                    <li class="metro-yellow">Новопеределкино</li>
                     <li class="foot">5 мин</li>
                     <li class="car">2 мин</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
-                    <li class="metro">Кунцевская </li>
+                    <li class="metro-red">Саларьево</li>
                     <li class="foot">18 мин</li>
                     <li class="cycle">7 мин</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
-                  <ul class="information__template-sublist">
-                    <li class="list-decoration">Готовность IV квартал 2026</li>
-                    <li class="list-decoration">Премиальная инфраструктура</li>
-                    <li class="list-decoration">Подземный паркинг с мойкой и сервисом</li>
+                  <ul class="list-decoration">
+                    <li class="">Готовность IV квартал 2026</li>
+                    <li class="">Премиальная инфраструктура</li>
+                    <li class="">Подземный паркинг с мойкой и сервисом</li>
                   </ul>
                 </li>
               </ul>
@@ -171,43 +208,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="card__image"></div>
-                <div class="footer__card">
-                  <table class="footer__card-table">
-                    <tr>
-                      <td>Этаж</td>
-                      <td>Количество<br>рабочих мест</td>
-                      <td>Стоимость м²</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>32</td>
-                      <td>250 000  ₽</td>
-                    </tr>
-                  </table>
-                  <div class="footer__card-accent"></div>
-                  <div class="footer_item">
-                    <div class="footer-text">87 м²</div>
-                    <div class="footer-text">18 146 000 ₽</div>
-                  </div>
-                </div>
-              </div>
-            <button class="button_card">подробнее</button>
-            </div>
-            <div class="card-template">
-              <div class="card">
-                <div class="header__card">
-                  <div class="number_card">№ 23</div>
-                  <div class="button_card-container">
-                    <button class="favorite_button">
-                      <div class="favorite_button-img"></div>
-                    </button>
-                    <button class="pdf_button">
-                      <div class="pdf_button-img"></div>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__image"></div>
+                <div class="card__image"><img src="images/1.jpg"></div>
                 <div class="footer__card">
                   <table class="footer__card-table">
                     <tr>
@@ -233,7 +234,7 @@
             <div class="card-template">
               <div class="card">
                 <div class="header__card">
-                  <div class="number_card">№ 23</div>
+                  <div class="number_card">№ 48</div>
                   <div class="button_card-container">
                     <button class="favorite_button">
                       <div class="favorite_button-img"></div>
@@ -243,7 +244,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="card__image"></div>
+                <div class="card__image"><img src="images/2.jpg"></div>
                 <div class="footer__card">
                   <table class="footer__card-table">
                     <tr>
@@ -252,15 +253,51 @@
                       <td>Стоимость м²</td>
                     </tr>
                     <tr>
-                      <td>3</td>
-                      <td>32</td>
-                      <td>250 000  ₽</td>
+                      <td>2</td>
+                      <td>27</td>
+                      <td>252 000  ₽</td>
                     </tr>
                   </table>
                   <div class="footer__card-accent"></div>
                   <div class="footer_item">
-                    <div class="footer-text">87 м²</div>
-                    <div class="footer-text">18 146 000 ₽</div>
+                    <div class="footer-text">36 м²</div>
+                    <div class="footer-text">19 076 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button_card">подробнее</button>
+            </div>
+            <div class="card-template">
+              <div class="card">
+                <div class="header__card">
+                  <div class="number_card">№ 12</div>
+                  <div class="button_card-container">
+                    <button class="favorite_button">
+                      <div class="favorite_button-img"></div>
+                    </button>
+                    <button class="pdf_button">
+                      <div class="pdf_button-img"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="card__image"><img src="images/3.jpg"></div>
+                <div class="footer__card">
+                  <table class="footer__card-table">
+                    <tr>
+                      <td>Этаж</td>
+                      <td>Количество<br>рабочих мест</td>
+                      <td>Стоимость м²</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>48</td>
+                      <td>256 000  ₽</td>
+                    </tr>
+                  </table>
+                  <div class="footer__card-accent"></div>
+                  <div class="footer_item">
+                    <div class="footer-text">52.3 м²</div>
+                    <div class="footer-text">23 861 000 ₽</div>
                   </div>
                 </div>
               </div>
@@ -276,35 +313,35 @@
           <div class="information__template">
             <div class="information__template-description">
               <div class="information__template-header">
-                <h2 class="title white">Родина Парк</h2>
+                <h2 class="title white">Родина Переделкино</h2>
                 <button class="accent-button">подробнее</button>
               </div>
               <ul class="information__template-list">
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
                     <li>Офисы класса А от 14 млн. ₽</li>
-                    <li class="location">ЗАО, ул. Верейская, 12</li>
+                    <li class="location">Боровское ш., вл. 51</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
-                    <li class="metro">Давыдково</li>
+                    <li class="metro-yellow">Новопеределкино</li>
                     <li class="foot">5 мин</li>
                     <li class="car">2 мин</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
                   <ul class="information__template-sublist">
-                    <li class="metro">Кунцевская </li>
+                    <li class="metro-red">Саларьево</li>
                     <li class="foot">18 мин</li>
                     <li class="cycle">7 мин</li>
                   </ul>
                 </li>
                 <li class="information__template-item">
-                  <ul class="information__template-sublist">
-                    <li class="list-decoration">Готовность IV квартал 2026</li>
-                    <li class="list-decoration">Премиальная инфраструктура</li>
-                    <li class="list-decoration">Подземный паркинг с мойкой и сервисом</li>
+                  <ul class="list-decoration">
+                    <li class="">Готовность IV квартал 2026</li>
+                    <li class="">Премиальная инфраструктура</li>
+                    <li class="">Подземный паркинг с мойкой и сервисом</li>
                   </ul>
                 </li>
               </ul>
@@ -325,7 +362,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="card__image"></div>
+                <div class="card__image"><img src="images/1.jpg"></div>
                 <div class="footer__card">
                   <table class="footer__card-table">
                     <tr>
@@ -351,7 +388,7 @@
             <div class="card-template">
               <div class="card">
                 <div class="header__card">
-                  <div class="number_card">№ 23</div>
+                  <div class="number_card">№ 48</div>
                   <div class="button_card-container">
                     <button class="favorite_button">
                       <div class="favorite_button-img"></div>
@@ -361,7 +398,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="card__image"></div>
+                <div class="card__image"><img src="images/2.jpg"></div>
                 <div class="footer__card">
                   <table class="footer__card-table">
                     <tr>
@@ -370,15 +407,15 @@
                       <td>Стоимость м²</td>
                     </tr>
                     <tr>
-                      <td>3</td>
-                      <td>32</td>
-                      <td>250 000  ₽</td>
+                      <td>2</td>
+                      <td>27</td>
+                      <td>252 000  ₽</td>
                     </tr>
                   </table>
                   <div class="footer__card-accent"></div>
                   <div class="footer_item">
-                    <div class="footer-text">87 м²</div>
-                    <div class="footer-text">18 146 000 ₽</div>
+                    <div class="footer-text">36 м²</div>
+                    <div class="footer-text">19 076 000 ₽</div>
                   </div>
                 </div>
               </div>
@@ -387,7 +424,7 @@
             <div class="card-template">
               <div class="card">
                 <div class="header__card">
-                  <div class="number_card">№ 23</div>
+                  <div class="number_card">№ 12</div>
                   <div class="button_card-container">
                     <button class="favorite_button">
                       <div class="favorite_button-img"></div>
@@ -397,7 +434,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="card__image"></div>
+                <div class="card__image"><img src="images/3.jpg"></div>
                 <div class="footer__card">
                   <table class="footer__card-table">
                     <tr>
@@ -406,15 +443,15 @@
                       <td>Стоимость м²</td>
                     </tr>
                     <tr>
-                      <td>3</td>
-                      <td>32</td>
-                      <td>250 000  ₽</td>
+                      <td>1</td>
+                      <td>48</td>
+                      <td>256 000  ₽</td>
                     </tr>
                   </table>
                   <div class="footer__card-accent"></div>
                   <div class="footer_item">
-                    <div class="footer-text">87 м²</div>
-                    <div class="footer-text">18 146 000 ₽</div>
+                    <div class="footer-text">52.3 м²</div>
+                    <div class="footer-text">23 861 000 ₽</div>
                   </div>
                 </div>
               </div>
@@ -652,36 +689,87 @@
     // Добавляем их в наблюдатель
     animationElements.forEach((el) => observer.observe(el));
   });
-</script>
-<script>
-  ymaps.ready(init); // Ждём загрузки API Яндекс.Карт
 
-  function init() {
-    // Создаём карту, задаём координаты и масштаб
-    var myMap = new ymaps.Map("map", {
-      center: [55.712818, 37.440891], // Координаты центра (пример: Москва)
-      zoom: 10
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    const slides = Array.from(document.querySelectorAll(".carousel > *"));
+    const nextBtn = document.querySelector(".carousel__next");
+    const prevBtn = document.querySelector(".carousel__prev");
+    const carouselBar = document.querySelector(".carousel__bar");
+
+    const slideWidth = carousel.offsetWidth;
+    const totalSlides = slides.length;
+
+    let currentIndex = totalSlides; // Начинаем с первого оригинального слайда (после дубликатов)
+
+    // Дублируем слайды
+    slides.forEach(slide => carousel.append(slide.cloneNode(true))); // Дубликаты в конец
+    slides.forEach(slide => carousel.prepend(slide.cloneNode(true))); // Дубликаты в начало
+
+    // Устанавливаем начальное смещение карусели
+    carousel.scrollLeft = slideWidth * currentIndex;
+
+    // Функция для перехода к нужному слайду
+    function moveToSlide(index) {
+      carousel.scrollTo({
+        left: slideWidth * index,
+        behavior: "smooth",
+      });
+
+      updateCarouselBar(); // Обновляем индикатор при смене слайда
+    }
+
+    // Функция для обновления состояния .carousel__bar
+    function updateCarouselBar() {
+      // Рассчитываем текущий оригинальный индекс (убираем дубли)
+      const originalIndex = (currentIndex - totalSlides + totalSlides) % totalSlides;
+
+      if (originalIndex === 0) {
+        // Заполнение на 50% слева
+        carouselBar.style.background = `linear-gradient(to right, var(--accent-color) 50%, var(--color-button) 50%)`;
+      } else if (originalIndex === 1) {
+        // Заполнение на 50% справа
+        carouselBar.style.background = `linear-gradient(to right, var(--color-button) 50%, var(--accent-color) 50%)`;
+      } else {
+        // По умолчанию делать серый для остальных случаев
+        carouselBar.style.background = `gray`;
+      }
+    }
+
+    // Обработчик кнопки "вперед"
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+
+      moveToSlide(currentIndex);
+
+      // Если мы дошли до конца дубликатов, "перепрыгиваем" на первый оригинальный слайд
+      if (currentIndex >= slides.length * 2) {
+        setTimeout(() => {
+          carousel.scrollLeft = slideWidth * slides.length; // Перепрыгиваем
+          currentIndex = totalSlides;
+        }, 300); // Задержка равна времени анимации
+      }
     });
 
-    // Кастомная иконка для маркера
-    var customIcon = {
-      iconLayout: 'default#image', // Тип иконки: картинка
-      iconImageHref: './map.svg',
-      iconImageSize: [30, 42], // Размер иконки (ширина, высота)
-      iconImageOffset: [-15, -42] // Смещение иконки относительно точки (центрируйте)
-    };
+    // Обработчик кнопки "назад"
+    prevBtn.addEventListener("click", () => {
+      currentIndex--;
 
-    // Добавляем метку с кастомной иконкой
-    var myPlacemark = new ymaps.Placemark([55.712818, 37.440891], {
-      hintContent: 'Мое кастомное место!',
-      balloonContent: 'Здесь вы могли бы разместить дополнительную информацию.'
-    }, customIcon);
+      moveToSlide(currentIndex);
 
-    // Добавляем метку на карту
-    myMap.geoObjects.add(myPlacemark);
-  }
+      // Если мы дошли до начала дубликатов, "перепрыгиваем" на последний оригинальный слайд
+      if (currentIndex < 0) {
+        setTimeout(() => {
+          carousel.scrollLeft = slideWidth * (slides.length - 1); // Перепрыгиваем
+          currentIndex = totalSlides - 1;
+        }, 300); // Задержка равна времени анимации
+      }
+    });
+
+    // Установить начальное состояние индикатора
+    updateCarouselBar();
+  });
+
 </script>
-
-
 </body>
 </html>

@@ -36,6 +36,8 @@
 
 .card__image{
   height: 210px;
+  margin: auto;
+  align-content: center;
 }
 
 .footer_item{

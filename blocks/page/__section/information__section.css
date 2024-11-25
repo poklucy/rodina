@@ -84,6 +84,22 @@
     justify-content: center;
 }
 
+.metro-yellow:before{
+    content: url("metro_yellow.svg");
+    height: 14px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.metro-red:before{
+    content: url("metro_red.svg");
+    height: 14px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .foot:before{
     content: url("foot.svg");
     height: 14px;
@@ -100,7 +116,92 @@
     justify-content: center;
 }
 
+.car:before{
+    content: url("car.svg");
+    height: 14px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .information__section .accent-button{
     width: 201px;
     height: 42px;
+}
+
+.information__template-list .list-decoration{
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.information__section .carousel_range{
+    padding: 28px 0 40px;
+}
+
+.carousel_range{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: auto;
+    align-items: center;
+}
+
+.carousel__prev{
+    background-image: url("befor.svg");
+    height: 14px;
+    width: 9px;
+}
+
+.carousel__bar {
+    height: 1px;
+    width: 220px;
+    background: var(--color-button); /* Начальный цвет */
+    margin: 10px auto; /* Центрируем */
+}
+
+.carousel__next{
+    background-image: url("next.svg");
+    height: 14px;
+    width: 9px;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
 }
